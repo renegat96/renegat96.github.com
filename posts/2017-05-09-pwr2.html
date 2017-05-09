@@ -62,17 +62,26 @@ Start!
 <p>This small piece of code can be translated to English as: if the button pressed was the ‘space’ key, then go run the instructions for jumping.</p>
 <h1 id="code-is-data-data-is-code">Code is data, data is code</h1>
 <p>These new instructions are provided in a language that the computer understands – that is someone, or more likely, many people, provided the computer instructions on how to convert the above text of JavaScript code into a series of steps that achieve the desired result of the little green character being able to jump when you press space.</p>
-<p>This process of translation from one computer language into something that the computer can actually execute is called compilation. The basic, fundamental set of instructions that a computer understands is called assembly. It looks kind of scary, here’s a piece of code that has a very similar functionality to the one we looked at above:</p>
+<p>This process of translation from one computer language into something that the computer can actually execute is called compilation. The basic, fundamental set of instructions that a computer understands is called assembly. It looks a little bit scary, but here’s a piece of code that has a very similar meaning to the one we looked at before:</p>
 <div class="sourceCode"><pre class="sourceCode asm"><code class="sourceCode fasm"><span class="bu">cmp</span><span class="bn"> $32, </span>%<span class="kw">eax</span>  <span class="co">; compare eax to 32</span>
 <span class="bu">jne</span> <span class="pp">end</span>        <span class="co">; go to end if not equal</span>
 <span class="bu">call</span> jump      <span class="co">; call jump</span>
 <span class="pp">end</span>:           <span class="co">; The End :)</span></code></pre></div>
 <p>This basically does the same thing – if the number we care about is 32 (the button we pressed is space), go run the instructions for jumping.</p>
+<p>A program that converts the first type of code, one that is easier for humans to read and write, into the second type of code, one that is easier for computers to execute, is called a compiler. This process takes as input instructions and produces as output other instructions.</p>
 <h1 id="exploiting-the-confusion">Exploiting the confusion</h1>
+<p>A simple compiler, with two instructions: - move {left, right, up, down}; - bark;</p>
+<p>Trusting trust, Thompson’s “cutest program” he ever wrote. Self-recognition, self-replication and how to put a virus inside a compiler that propagates itself. Maybe too much?</p>
 <h1 id="broadcasting-live">Broadcasting live</h1>
+<p>Talk about information that leaks from doing certain things like visiting a website, or posting something on a website. How can you be anonymous? What does it mean to be anonymous?</p>
 <h1 id="dont-let-it-go">Don’t let it go</h1>
+<p>Preserving your anonymity. How and why? Who cares? Keeps your data secure, but allows you to get cool services anyway.</p>
 <h2 id="anonymity-sets">Anonymity sets</h2>
-<h2 id="who-knows-what---algebraic-formalization-of-system-interactions">Who knows what - algebraic formalization of system interactions</h2>
+<p>Riposte, the idea of a mixer and anonymity sets. Quotes from Henry Corrigan-Gibbs, interview on May 15.</p>
+<h2 id="stimuli-and-responses-algebraic-formalization-of-system-interactions">Stimuli and responses – algebraic formalization of system interactions</h2>
+<p>But most things are big, hence it is very hard to reason about them. People tend to get incredibly confused with long chains of interactions.</p>
+<p>So why not automate the reasoning about the security of things? But that requires a formalization, being able to translate the interactions between components, and what qualities we care about to terms that a computer understands.</p>
+<p>Interview with Jaskolka on May 9th.</p>
 <h1 id="works-cited">Works Cited</h1>
 
             </article>
