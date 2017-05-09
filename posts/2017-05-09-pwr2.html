@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code all day - 2017-05-09-pwr2</title>
+        <link rel="stylesheet" href="../css/tufte.css" />
+        <link rel="stylesheet" href="../css/syntax.css" />
+        
+            <script src="../js/game.js"></script>
+        
+    </head>
+    <body>
+        <div id="header">
+            <div id="navigation">
+                <a href="../">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../archive.html">Archive</a>
+            </div>
+        </div>
+
+        <div class="page">
+            <article>
+                <div class="title-div">
+    <h1>2017-05-09-pwr2</h1>
+    
+</div>
+
+<p>
+    Posted on May  9, 2017
+    
+</p>
+
+<h1 id="why-is-computer-security-hard">Why is computer security hard</h1>
+<p>Computers are eating the world. Decades ago, you had a car. It was a simple device, it had an engine, four tires (more or less) and a steering wheel. It was all mechanical. Now a car is made up of hundreds of little computers, coordinating with one another, strapped to wheels.</p>
+<h2 id="a-trip-down-digital-lane">A trip down Digital lane</h2>
+<p>Chances are you’re reading this text on one of these:</p>
+<p>(stick figure holding a laptop)</p>
+<p>You laptop somehow knew how to reach this website. It knew how to reach some other computer (probably located halfway around the world). Your laptop had to negotiate with this other computer so it could get the page you want and not some other page.</p>
+<p>(computers negotiating)</p>
+<p>And once it got a page, it has to know how to show it to you, with all the fancy (humor me) pictures arranged in the proper spots, a font that was the right size so you can read it, and these nice little clickable footnotes. [add clickable footnote with cutesy remark about sources]</p>
+<p>So how does your computer know to do all these things? Who taught it?</p>
+<p>A computer does not precisely learn new things the same way a human does. For the most part, a computer only follows instructions very, very closely, with intense precision. In order to properly achieve <em>anything</em>, the computer follows a recipe that some human provided. While these recipes bear some similarity to baking a cake, most of them are incredibly long. Let us consider Google Chrome, a popular web browser. Chrome is simply a large program, a recipe of sorts, for baking web pages. It fetches the ingredients of a web page - the text, the images, the fonts, etc. - and then arranges all of these on the screen for your reading pleasure. The whole program is made up of about <a href="https://www.openhub.net/p/chrome/analyses/latest/languages_summary">16 million</a> lines of instructions. (as of April 2017)</p>
+<p>But a web page is not simply some static dead tree. A web page is alive, it sings your favorite song, a page streams the latest episode of your favorite show, it jumps to avoid obstacles.</p>
+<canvas id="canvas" width="400" height="200px">
+</canvas>
+<button onClick="start()">
+Start!
+</button>
+<p>How is it possible that all this is written in <em>only</em> 16 million lines of instructions? Well, not all this functionality is provided with the Chrome browser, but the Chrome recipe is big and detailed enough to allow it to extend itself with new recipes as you go through new websites. Every time you load a page, the browser gets all of the ingredients for that page. And these ingredients include text and images, but they also include new recipes - new programs that the browser downloads and executes. An example of such a program is the above little game, a set of instructions that teach the Chrome browser how to draw the character, what colors should the obstacles be, how fast should the character be moving, when to jump and when not to.</p>
+<p>So what do these instructions look like? Here is an example from the actual instructions of the game above.<span><label for="sn-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-1" class="margin-toggle" /><span class="sidenote">The lines that start with <code>//</code> are comments, the rest of the line is simply ignored when the computer is following the instructions, but they provide useful information to a human reading the instructions.<br />
+<br />
+</span></span></p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">// snippet of JavaScript code</span>
+<span class="kw">function</span> <span class="at">onButtonClick</span>(event) <span class="op">{</span>
+    <span class="cf">if</span> (<span class="va">event</span>.<span class="at">keyCode</span> <span class="op">==</span> <span class="dv">32</span>) <span class="op">{</span>
+        <span class="co">// if key pressed is 'space', then jump</span>
+        <span class="at">jump</span>()<span class="op">;</span>
+    <span class="op">}</span>
+<span class="op">}</span></code></pre></div>
+<h2 id="code-is-data-data-is-code">Code is data, data is code</h2>
+<p>These new instructions are provided in a language that the computer understands – that is someone, or more likely, many people, provided the computer instructions on how to convert the above text of JavaScript code into a series of steps that achieve the desired result of the little green character being able to jump when you press space.</p>
+<h2 id="exploiting-the-confusion">Exploiting the confusion</h2>
+<h2 id="broadcasting-live">Broadcasting live</h2>
+<h2 id="dont-let-it-go">Don’t let it go</h2>
+<h3 id="anonymity-sets">Anonymity sets</h3>
+<h3 id="who-knows-what---algebraic-formalization-of-system-interactions">Who knows what - algebraic formalization of system interactions</h3>
+<h1 id="works-cited">Works Cited</h1>
+
+            </article>
+        </div>
+    </body>
+</html>
