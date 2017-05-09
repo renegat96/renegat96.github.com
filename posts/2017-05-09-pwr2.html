@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Code all day - 2017-05-09-pwr2</title>
+        <title>Code all day - Why is computer security hard</title>
         <link rel="stylesheet" href="../css/tufte.css" />
         <link rel="stylesheet" href="../css/syntax.css" />
         
@@ -23,7 +23,7 @@
         <div class="page">
             <article>
                 <div class="title-div">
-    <h1>2017-05-09-pwr2</h1>
+    <h1>Why is computer security hard</h1>
     
 </div>
 
@@ -32,9 +32,8 @@
     
 </p>
 
-<h1 id="why-is-computer-security-hard">Why is computer security hard</h1>
 <p>Computers are eating the world. Decades ago, you had a car. It was a simple device, it had an engine, four tires (more or less) and a steering wheel. It was all mechanical. Now a car is made up of hundreds of little computers, coordinating with one another, strapped to wheels.</p>
-<h2 id="a-trip-down-digital-lane">A trip down Digital lane</h2>
+<h1 id="a-trip-down-digital-lane">A trip down Digital lane</h1>
 <p>Chances are you’re reading this text on one of these:</p>
 <p>(stick figure holding a laptop)</p>
 <p>You laptop somehow knew how to reach this website. It knew how to reach some other computer (probably located halfway around the world). Your laptop had to negotiate with this other computer so it could get the page you want and not some other page.</p>
@@ -54,18 +53,26 @@ Start!
 </span></span></p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">// snippet of JavaScript code</span>
 <span class="kw">function</span> <span class="at">onButtonClick</span>(event) <span class="op">{</span>
+    <span class="co">// the number-value of 'space' is 32</span>
     <span class="cf">if</span> (<span class="va">event</span>.<span class="at">keyCode</span> <span class="op">==</span> <span class="dv">32</span>) <span class="op">{</span>
         <span class="co">// if key pressed is 'space', then jump</span>
         <span class="at">jump</span>()<span class="op">;</span>
     <span class="op">}</span>
 <span class="op">}</span></code></pre></div>
-<h2 id="code-is-data-data-is-code">Code is data, data is code</h2>
+<p>This small piece of code can be translated to English as: if the button pressed was the ‘space’ key, then go run the instructions for jumping.</p>
+<h1 id="code-is-data-data-is-code">Code is data, data is code</h1>
 <p>These new instructions are provided in a language that the computer understands – that is someone, or more likely, many people, provided the computer instructions on how to convert the above text of JavaScript code into a series of steps that achieve the desired result of the little green character being able to jump when you press space.</p>
-<h2 id="exploiting-the-confusion">Exploiting the confusion</h2>
-<h2 id="broadcasting-live">Broadcasting live</h2>
-<h2 id="dont-let-it-go">Don’t let it go</h2>
-<h3 id="anonymity-sets">Anonymity sets</h3>
-<h3 id="who-knows-what---algebraic-formalization-of-system-interactions">Who knows what - algebraic formalization of system interactions</h3>
+<p>This process of translation from one computer language into something that the computer can actually execute is called compilation. The basic, fundamental set of instructions that a computer understands is called assembly. It looks kind of scary, here’s a piece of code that has a very similar functionality to the one we looked at above:</p>
+<div class="sourceCode"><pre class="sourceCode asm"><code class="sourceCode fasm"><span class="bu">cmp</span><span class="bn"> $32, </span>%<span class="kw">eax</span>  <span class="co">; compare eax to 32</span>
+<span class="bu">jne</span> <span class="pp">end</span>        <span class="co">; go to end if not equal</span>
+<span class="bu">call</span> jump      <span class="co">; call jump</span>
+<span class="pp">end</span>:           <span class="co">; The End :)</span></code></pre></div>
+<p>This basically does the same thing – if the number we care about is 32 (e.g. the button we called is space), go run the instructions from</p>
+<h1 id="exploiting-the-confusion">Exploiting the confusion</h1>
+<h1 id="broadcasting-live">Broadcasting live</h1>
+<h1 id="dont-let-it-go">Don’t let it go</h1>
+<h2 id="anonymity-sets">Anonymity sets</h2>
+<h2 id="who-knows-what---algebraic-formalization-of-system-interactions">Who knows what - algebraic formalization of system interactions</h2>
 <h1 id="works-cited">Works Cited</h1>
 
             </article>
