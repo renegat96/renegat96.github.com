@@ -57,28 +57,26 @@
 <p>This small piece of code can be translated to English as: if the button pressed was the ‘space’ key, then go run the instructions for jumping.</p>
 <h1 id="code-is-data-data-is-code">Code is data, data is code</h1>
 <p>These new instructions are provided in a language that the computer understands – that is someone, or more likely, many people, provided the computer instructions on how to convert the above text of JavaScript code into a series of steps that achieve the desired result of the little green character being able to jump when you press space.</p>
-<p>This process of translation from one computer language into something that the computer can actually execute is called compilation. The basic, fundamental set of instructions that a computer understands is called assembly. It looks a little bit scary, but here’s a piece of code that has a very similar meaning to the one we looked at before:</p>
+<p>This process of translation from one computer language into something that the computer can actually execute is called compilation. The basic, fundamental set of instructions that a computer understands is called assembly.<span><label for="sn-3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-3" class="margin-toggle" /><span class="sidenote">The language of Assembly is a way to write directly in the language that the physical computer will understand and be able to execute. Code written that way can be very, very fast, and yet be incredibly <em>unsafe</em>. Assembly provides almost no protection by itself. An interested reader can take a look at an article ‘<a href="https://software.intel.com/en-us/articles/introduction-to-x64-assembly">Introduction to x64 Assembly</a>’.<br />
+<br />
+</span></span> It looks a little bit scary, but here’s a piece of code that has a very similar meaning to the one we looked at before:</p>
 <div class="sourceCode"><pre class="sourceCode asm"><code class="sourceCode fasm"><span class="bu">cmp</span><span class="bn"> $32, </span>%<span class="kw">eax</span>  <span class="co">; compare eax to 32</span>
 <span class="bu">jne</span> <span class="pp">end</span>        <span class="co">; go to end if not equal</span>
 <span class="bu">call</span> jump      <span class="co">; call jump</span>
 <span class="pp">end</span>:           <span class="co">; The End :)</span></code></pre></div>
-<p>This basically does the same thing – if the number we care about is 32 (the button we pressed is space), go run the instructions for jumping.</p>
-<p>A program that converts the first type of code, one that is easier for humans to read and write, into the second type of code, one that is easier for computers to execute, is called a compiler. This process takes as input instructions and produces as output other instructions.</p>
+<p>This code does the same thing – if the number we care about is 32 (the button we pressed is space), go run the instructions for jumping.</p>
+<p>A program that converts the first type of code, one that is easier for humans to read and write, into the second type of code, one that is easier for computers to execute, is called a compiler. This process takes as input instructions and produces as output other instructions. And your web browser, what you are currently using to read this page, goes through this process for every page, every time you open email, or post a picture to your favorite social media.</p>
 <h1 id="exploiting-the-confusion">Exploiting the confusion</h1>
-<p>A simple compiler, with two instructions:</p>
-<ul>
-<li>move {left, right, up, down};</li>
-<li>bark;</li>
-</ul>
-<p>Trusting trust, Thompson’s “cutest program” he ever wrote. Self-recognition, self-replication and how to put a virus inside a compiler that propagates itself. Maybe too much?<span><label for="sn-3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-3" class="margin-toggle" /><span class="sidenote">Thompson, Ken. REFLECTIONS ON TRUSTING TRUST. ACM, 1984.<br />
+<p>So let us consider this piece of personal information, a simple photo – a variety of those exist on your phone or laptop, yet your browser must provide you two different, and contradictory, functionalities. The first is the ability to publish the photos when you want that, which requires the browser to have access to all photos; the second is protection from malicious websites. The browser downloads and executes instructions from every website, but must maintain different levels of access that each downloaded program receives. This is achieved through <em>isolation</em>. Each program runs in a <em>sandbox</em> – a restricted environment that precludes that program from communicating with other programs.<span><label for="sn-4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-4" class="margin-toggle" /><span class="sidenote">Wahbe, Robert, et al. EFFICIENT SOFTWARE-BASED FAULT ISOLATION<br />
 <br />
 </span></span></p>
+<p>A sandbox needs a mechanism for information to get out, Academic research,</p>
 <h1 id="broadcasting-live">Broadcasting live</h1>
 <p>Talk about information that leaks from doing certain things like visiting a website, or posting something on a website. How can you be anonymous? What does it mean to be anonymous?</p>
 <h1 id="dont-let-it-go">Don’t let it go</h1>
 <p>Preserving your anonymity. How and why? Who cares? Keeps your data secure, but allows you to get cool services anyway.</p>
 <h2 id="anonymity-sets">Anonymity sets</h2>
-<p>Riposte, the idea of a mixer and anonymity sets. Quotes from Henry Corrigan-Gibbs, interview on May 15.<span><label for="sn-4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-4" class="margin-toggle" /><span class="sidenote">Corrigan-Gibbs, Henry, et al. RIPOSTE: AN ANONYMOUS MESSAGING SYSTEM HANDLING MILLIONS OF USERS.<br />
+<p>Riposte, the idea of a mixer and anonymity sets. Quotes from Henry Corrigan-Gibbs, interview on May 15.<span><label for="sn-5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-5" class="margin-toggle" /><span class="sidenote">Corrigan-Gibbs, Henry, et al. RIPOSTE: AN ANONYMOUS MESSAGING SYSTEM HANDLING MILLIONS OF USERS.<br />
 <br />
 </span></span></p>
 <h2 id="stimuli-and-responses-algebraic-formalization-of-system-interactions">Stimuli and responses – algebraic formalization of system interactions</h2>
@@ -87,7 +85,8 @@
 <p>Interview with Jaskolka on May 9th.</p>
 <h1 id="works-cited">Works Cited</h1>
 <p>Corrigan-Gibbs, Henry, et al. RIPOSTE: AN ANONYMOUS MESSAGING SYSTEM HANDLING MILLIONS OF USERS. <a href="https://arxiv.org/abs/1503.06115v5" class="uri">https://arxiv.org/abs/1503.06115v5</a></p>
-<p>Thompson, Ken. REFLECTIONS ON TRUSTING TRUST. ACM, 1984. <a href="https://dl.acm.org/citation.cfm?id=358210" class="uri">https://dl.acm.org/citation.cfm?id=358210</a></p>
+<p>Lomont, Chris. INTRODUCTION TO X64 ASSEMBLY. Intel, 2016. <a href="https://software.intel.com/en-us/articles/introduction-to-x64-assembly" class="uri">https://software.intel.com/en-us/articles/introduction-to-x64-assembly</a></p>
+<p>Wahbe, Robert, et al. EFFICIENT SOFTWARE-BASED FAULT ISOLATION <a href="http://cs2.unomaha.edu/~stanw/papers/93-sfi.pdf" class="uri">http://cs2.unomaha.edu/~stanw/papers/93-sfi.pdf</a></p>
 
             </article>
         </div>
