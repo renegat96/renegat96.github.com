@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Code all day - Why is computer security hard</title>
+        <title>Code all day - Why computer security is hard</title>
         <link rel="stylesheet" href="../css/tufte.css" />
         <link rel="stylesheet" href="../css/syntax.css" />
         
@@ -22,30 +22,41 @@
 
         <div class="page">
             <article>
-                <div class="title-div">
-    <h1>Why is computer security hard</h1>
+                <p class="author">
+    <span>
     
-</div>
+        Hristo Stoyanov
+    
+    </span>
 
-<p>
-    Posted on May  9, 2017
+    
+        17.05.17
     
 </p>
 
+<div class="title-div">
+    <h1 class="title">Why computer security is hard</h1>
+    
+</div>
+
+
 <p>Computers are eating the world. A new car has as many as 150 <em>million</em> lines of code running.<span><label for="sn-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-1" class="margin-toggle" /><span class="sidenote">Economist, The. COMPUTER SECURITY IS BROKEN FROM TOP TO BOTTOM. Economist, 2017.<br />
 <br />
-</span></span> Anything from a new fridge to a baby monitor is now connected to the Internet.</p>
-<h1 id="a-trip-down-digital-lane">A trip down Digital lane</h1>
-<p>Chances are you’re reading this text on one of these:</p>
-<p>(stick figure holding a laptop)</p>
-<p>You laptop somehow knew how to reach this website. It knew how to reach some other computer (probably located halfway around the world). Your laptop had to negotiate with this other computer so it could get the page you want and not some other page.</p>
-<p>(computers negotiating)</p>
-<p>And once it got a page, it has to know how to show it to you, with all the fancy (humor me) pictures arranged in the proper spots, a font that was the right size so you can read it, and these nice little clickable footnotes. [add clickable footnote with cutesy remark about sources]</p>
+</span></span> Anything from a new fridge to a baby monitor is now connected to the Internet. A recent attack against Windows computers worldwide demonstrates the impact that a single bug can produce when exploited commercially – affecting hundreds of thousands of people and organizations.<span><label for="sn-2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-2" class="margin-toggle" /><span class="sidenote"><img src="https://upload.wikimedia.org/wikipedia/en/1/18/Wana_Decrypt0r_screenshot.png" alt="image" /> Screenshot of the <a href="https://www.ft.com/content/af74e3f4-373d-11e7-99bd-13beb0903fa3" target="_blank">WannaCry</a> ransomware – a malicious program that infects a machine, encrypts important data and demands payment, a ransom, to get the data back. The attack targeted a wide variety of organizations, from the UK National Health Service to FedEx.<br />
+<br />
+</span></span> While the degree of the danger posed by such attacks varies between organizations, the risks are likely to increase as computers continue spreading to every facet of human activity.</p>
+<p>And while losing some documents may seem harmless, and a lot of organizations keep backups of important information, other attacks achieve much more dramatic outcomes. In December 2015, more than 230,000 people in Ukraine were left in the dark after a hack of three electricity distribution centers.<span><label for="sn-3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-3" class="margin-toggle" /><span class="sidenote">Zetter, Kim. <a href="https://www.wired.com/2016/03/inside-cunning-unprecedented-hack-ukraines-power-grid/" target="_blank">INSIDE THE CUNNING, UNPRECEDENTED HACK OF UKRAINE’s POWER GRID</a>. Wired, 2016.<br />
+<br />
+</span></span></p>
+<p>How do we prevent such attacks? Is it even possible? Before we can get a good answer to that question we need an understanding of how an attack proceeds.</p>
+<h2 id="a-trip-down-digital-lane">A trip down Digital lane</h2>
+<p>Chances are you’re reading this text on a laptop. You laptop somehow knew how to reach this website. It knew how to reach some other computer (probably located halfway around the world). Your laptop had to negotiate with this other computer so it could get the page you want and not some other page.</p>
+<p>And once it got a page, it has to know how to show it to you, with all the fancy (humor me) pictures arranged in the proper spots, a font that was the right size so you can read it, and these nice little clickable footnotes.</p>
 <p>So how does your computer know to do all these things? Who taught it?</p>
-<p>A computer does not precisely learn new things the same way a human does. For the most part, a computer only follows instructions very, very closely, with intense precision. In order to properly achieve <em>anything</em>, the computer follows a recipe that some human provided. While these recipes bear some similarity to baking a cake, most of them are incredibly long. Let us consider Google Chrome, a popular web browser. Chrome is simply a large program, a recipe of sorts, for baking web pages. It fetches the ingredients of a web page - the text, the images, the fonts, etc. - and then arranges all of these on the screen for your reading pleasure. The whole program is made up of about <a href="https://www.openhub.net/p/chrome/analyses/latest/languages_summary">16 million</a> lines of instructions. (as of April 2017)</p>
-<p>But a web page is not simply some static dead tree. A web page is alive, it sings your favorite song, a page streams the latest episode of your favorite show, it jumps to avoid obstacles. <span><label for="sn-2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-2" class="margin-toggle" /><span class="sidenote"><br /><canvas id="canvas" width="300px" height="200px"></canvas><br /> Press Space to jump. <br /><button onClick="start()">Start!</button></span></span></p>
+<p>A computer does not precisely learn new things the same way a human does. For the most part, a computer only follows instructions very, very closely, with intense precision. In order to properly achieve <em>anything</em>, the computer follows a recipe that some human provided. While these recipes bear some similarity to baking a cake, most of them are incredibly long. Let us consider Google Chrome, a popular web browser. Chrome is simply a large program, a recipe of sorts, for baking web pages. It fetches the ingredients of a web page - the text, the images, the fonts, etc. - and then arranges all of these on the screen for your reading pleasure. The whole program is made up of about <a href="https://www.openhub.net/p/chrome/analyses/latest/languages_summary" target="_blank">16 million</a> lines of instructions. (as of April 2017)</p>
+<p>But a web page is not simply some static dead tree. A web page is alive, it sings your favorite song, a page streams the latest episode of your favorite show, it jumps to avoid obstacles. <span><label for="sn-4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-4" class="margin-toggle" /><span class="sidenote"><br /><canvas id="canvas" width="300px" height="200px"></canvas><br /> Press Space to jump. <br /><button onClick="start()">Start!</button></span></span></p>
 <p>How is it possible that all this is written in <em>only</em> 16 million lines of instructions? Well, not all this functionality is provided with the Chrome browser, but the Chrome recipe is big and detailed enough to allow it to extend itself with new recipes as you go through new websites. Every time you load a page, the browser gets all of the ingredients for that page. And these ingredients include text and images, but they also include new recipes - new programs that the browser downloads and executes. An example of such a program is the above little game, a set of instructions that teach the Chrome browser how to draw the character, what colors should the obstacles be, how fast should the character be moving, when to jump and when not to.</p>
-<p>So what do these instructions look like? Here is an example from the actual instructions of the game above.<span><label for="sn-3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-3" class="margin-toggle" /><span class="sidenote">The lines that start with <code>//</code> are comments, the rest of the line is simply ignored when the computer is following the instructions, but they provide useful information to a human reading the instructions.<br />
+<p>So what do these instructions look like? Here is an example from the actual instructions of the game above.<span><label for="sn-5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-5" class="margin-toggle" /><span class="sidenote">The lines that start with <code>//</code> are comments, the rest of the line is simply ignored when the computer is following the instructions, but they provide useful information to a human reading the instructions.<br />
 <br />
 </span></span></p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">// snippet of JavaScript code</span>
@@ -57,9 +68,9 @@
     <span class="op">}</span>
 <span class="op">}</span></code></pre></div>
 <p>This small piece of code can be translated to English as: if the button pressed was the ‘space’ key, then go run the instructions for jumping.</p>
-<h1 id="code-is-data-data-is-code">Code is data, data is code</h1>
+<h2 id="code-is-data-data-is-code">Code is data, data is code</h2>
 <p>These new instructions are provided in a language that the computer understands – that is someone, or more likely, many people, provided the computer instructions on how to convert the above text of JavaScript code into a series of steps that achieve the desired result of the little green character being able to jump when you press space.</p>
-<p>This process of translation from one computer language into something that the computer can actually execute is called compilation. The basic, fundamental set of instructions that a computer understands is called assembly.<span><label for="sn-4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-4" class="margin-toggle" /><span class="sidenote">The language of Assembly is a way to write directly in the language that the physical computer will understand and be able to execute. Code written that way can be very, very fast, and yet be incredibly <em>unsafe</em>. Assembly provides almost no protection by itself. An interested reader can take a look at an article ‘<a href="https://software.intel.com/en-us/articles/introduction-to-x64-assembly">Introduction to x64 Assembly</a>’.<br />
+<p>This process of translation from one computer language into something that the computer can actually execute is called compilation. The basic, fundamental set of instructions that a computer understands is called assembly.<span><label for="sn-6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-6" class="margin-toggle" /><span class="sidenote">The language of Assembly is a way to write directly in the language that the physical computer will understand and be able to execute. Code written that way can be very, very fast, and yet be incredibly <em>unsafe</em>. Assembly provides almost no protection by itself. An interested reader can take a look at an article ‘<a href="https://software.intel.com/en-us/articles/introduction-to-x64-assembly" target="_blank">Introduction to x64 Assembly</a>’.<br />
 <br />
 </span></span> It looks a little bit scary, but here’s a piece of code that has a very similar meaning to the one we looked at before:</p>
 <div class="sourceCode"><pre class="sourceCode asm"><code class="sourceCode fasm"><span class="bu">cmp</span><span class="bn"> $32, </span>%<span class="kw">eax</span>  <span class="co">; compare eax to 32</span>
@@ -68,34 +79,30 @@
 <span class="pp">end</span>:           <span class="co">; The End :)</span></code></pre></div>
 <p>This code does the same thing – if the number we care about is 32 (the button we pressed is space), go run the instructions for jumping.</p>
 <p>A program that converts the first type of code, one that is easier for humans to read and write, into the second type of code, one that is easier for computers to execute, is called a compiler. This process takes as input instructions and produces as output other instructions. And your web browser, what you are currently using to read this page, goes through this process for every page, every time you open email, or post a picture to your favorite social media.</p>
-<h1 id="exploiting-the-confusion">Exploiting the confusion</h1>
-<p>So let us consider this piece of personal information, a simple photo – a variety of those exist on your phone or laptop, yet your browser must provide you two different, and contradictory, functionalities. The first is the ability to publish the photos when you want that, which requires the browser to have access to all photos; the second is protection from malicious websites. The browser downloads and executes instructions from every website, but must maintain different levels of access that each downloaded program receives. This is achieved through <em>isolation</em>. Each program runs in a <em>sandbox</em> – a restricted environment that precludes that program from communicating with other programs.<span><label for="sn-5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-5" class="margin-toggle" /><span class="sidenote">Wahbe, Robert, et al. EFFICIENT SOFTWARE-BASED FAULT ISOLATION<br />
+<h2 id="exploiting-the-confusion">Exploiting the confusion</h2>
+<p>So let us consider this piece of personal information, a simple photo – a variety of those exist on your phone or laptop, yet your browser must provide you two different, and contradictory, functionalities. The first is the ability to publish the photos when you want that, which requires the browser to have access to all photos; the second is protection from malicious websites. The browser downloads and executes instructions from every website, but must maintain different levels of access that each downloaded program receives. This is achieved through <em>isolation</em>. Each program runs in a <em>sandbox</em> – a restricted environment that precludes that program from communicating with other programs.<span><label for="sn-7" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-7" class="margin-toggle" /><span class="sidenote">Wahbe, Robert, et al. EFFICIENT SOFTWARE-BASED FAULT ISOLATION<br />
 <br />
 </span></span></p>
 <p>A sandbox needs a mechanism for the output of the isolated program to be read. This presents the same conflict of isolation and functionality that we observed in the photo-sharing scenario. If a sandboxed program cannot provide output, it certainly cannot escape the restricted environment. As long as there is a mechanism to provide output, the program may be able to exploit the program that reads this output and thus escape the sandbox.</p>
-<p>Academics and industry have been trying for decades to come up with effective mechanisms for sandboxing, but those efforts have proven to produce only a temporary safeguard. Most mechanisms usually end up broken soon after a large enough number of users actually use them. Sotirov and Down broke a wide variety of protective measures.<span><label for="sn-6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-6" class="margin-toggle" /><span class="sidenote">Sotirov, Alexander el al. BYPASSING BROWSER MEMORY PROTECTIONS. BlackHat, 2008.<br />
+<p>Academics and industry have been trying for decades to come up with effective mechanisms for sandboxing, but those efforts have proven to produce only a temporary safeguard. Most mechanisms usually end up broken soon after a large enough number of users actually use them. Sotirov and Down broke a wide variety of protective measures.<span><label for="sn-8" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-8" class="margin-toggle" /><span class="sidenote">Sotirov, Alexander el al. BYPASSING BROWSER MEMORY PROTECTIONS. BlackHat, 2008.<br />
 <br />
 </span></span></p>
 <p>Braking out of sandboxes becomes a profitable business, a malicious actor would come up with code that can escape your browser sandbox, publish that code on a website so that every user who visits the website executes it. Once on a user machine, the malicious code steals any and all interesting and valuable data – contact information, credit card numbers and sends it to the writer of the malicious code.</p>
+<p>In fact, it is precisely this confusion of input data and code that allowed the spread of thspread of thspread of thspread of the</p>
 <h2 id="stimuli-and-responses-algebraic-formalization-of-system-interactions">Stimuli and responses – algebraic formalization of system interactions</h2>
 <p>While sandboxes are an incredibly useful mechanism for isolation, they are not perfect. And, usually, there is not one sandbox, but many – each one runs a different program, provides a different functionality. What is the impact of one malicious program on other, correctly functioning programs?</p>
-<p>These are the questions that Dr. Jason Jaskolka tries to answer. The odd computer scientist at a political</p>
+<p>These are the questions that Dr. Jason Jaskolka tries to answer. The odd computer scientist at a political science department, Dr. Jaskolka easily gets excited to talk about his research.</p>
 <p>But most things are big, hence it is very hard to reason about them. People tend to get incredibly confused with long chains of interactions.</p>
 <p>So why not automate the reasoning about the security of things? But that requires a formalization, being able to translate the interactions between components, and what qualities we care about to terms that a computer understands.</p>
 <p>Interview with Jaskolka on May 9th.</p>
-<h1 id="broadcasting-live-and-anonymity">Broadcasting live and anonymity</h1>
-<h1 id="keeping-it-together">Keeping it together</h1>
-<p>Preserving your anonymity. How and why? Who cares? Keeps your data secure, but allows you to get cool services anyway.</p>
-<h2 id="anonymity-sets">Anonymity sets</h2>
-<p>Riposte, the idea of a mixer and anonymity sets. Quotes from Henry Corrigan-Gibbs, interview on May 15.<span><label for="sn-7" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-7" class="margin-toggle" /><span class="sidenote">Corrigan-Gibbs, Henry, et al. RIPOSTE: AN ANONYMOUS MESSAGING SYSTEM HANDLING MILLIONS OF USERS.<br />
-<br />
-</span></span></p>
-<h1 id="works-cited">Works Cited</h1>
-<p>Corrigan-Gibbs, Henry, et al. <a href="https://arxiv.org/abs/1503.06115v5">RIPOSTE: AN ANONYMOUS MESSAGING SYSTEM HANDLING MILLIONS OF USERS</a>.</p>
-<p>Economist, The. <a href="http://www.economist.com/news/science-and-technology/21720268-consequences-pile-up-things-are-starting-improve-computer-security">COMPUTER SECURITY IS BROKEN FROM TOP TO BOTTOM</a>. Economist, 2017.</p>
-<p>Lomont, Chris. <a href="https://software.intel.com/en-us/articles/introduction-to-x64-assembly">INTRODUCTION TO X64 ASSEMBLY</a>. Intel, 2016.</p>
-<p>Sotirov, Alexander el al. <a href="https://www.blackhat.com/presentations/bh-usa-08/Sotirov_Dowd/bh08-sotirov-dowd.pdf">BYPASSING BROWSER MEMORY PROTECTIONS</a>. BlackHat, 2008.</p>
-<p>Wahbe, Robert, et al. <a href="http://cs2.unomaha.edu/~stanw/papers/93-sfi.pdf">EFFICIENT SOFTWARE-BASED FAULT ISOLATION</a></p>
+<h2 id="broadcasting-live-and-anonymity">Broadcasting live and anonymity</h2>
+<h2 id="works-cited">Works Cited</h2>
+<p>Corrigan-Gibbs, Henry, et al. <a href="https://arxiv.org/abs/1503.06115v5" target="_blank">RIPOSTE: AN ANONYMOUS MESSAGING SYSTEM HANDLING MILLIONS OF USERS</a>.</p>
+<p>Economist, The. <a href="http://www.economist.com/news/science-and-technology/21720268-consequences-pile-up-things-are-starting-improve-computer-security" target="_blank">COMPUTER SECURITY IS BROKEN FROM TOP TO BOTTOM</a>. Economist, 2017.</p>
+<p>Jones, Sam. <a href="https://www.ft.com/content/af74e3f4-373d-11e7-99bd-13beb0903fa3" target="_blank">WHAT IS WANNACRY AND HOW CAN IT BE STOPPED?</a>. Financial Times, 2017.</p>
+<p>Lomont, Chris. <a href="https://software.intel.com/en-us/articles/introduction-to-x64-assembly" target="_blank">INTRODUCTION TO X64 ASSEMBLY</a>. Intel, 2016.</p>
+<p>Sotirov, Alexander el al. <a href="https://www.blackhat.com/presentations/bh-usa-08/Sotirov_Dowd/bh08-sotirov-dowd.pdf" target="_blank">BYPASSING BROWSER MEMORY PROTECTIONS</a>. BlackHat, 2008.</p>
+<p>Wahbe, Robert, et al. <a href="http://cs2.unomaha.edu/~stanw/papers/93-sfi.pdf" target="_blank">EFFICIENT SOFTWARE-BASED FAULT ISOLATION</a></p>
 
             </article>
         </div>
