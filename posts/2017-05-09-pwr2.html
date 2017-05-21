@@ -89,16 +89,22 @@
 </span></span></p>
 <p>Braking out of sandboxes becomes a profitable business, a malicious actor would come up with code that can escape your browser sandbox, publish that code on a website so that every user who visits the website executes it. Once on a user machine, the malicious code steals any and all interesting and valuable data – contact information, credit card numbers and sends it to the writer of the malicious code.</p>
 <p>In fact, it is precisely this confusion of input data and code that allowed the spread of WannaCry. An attacker would be able to cause the target Windows machine to execute arbitrary code by crafting special packets and sending them to the target.</p>
-<h2 id="stimuli-and-responses-algebraic-formalization-of-system-interactions">Stimuli and responses – algebraic formalization of system interactions</h2>
-<p>While sandboxes are an incredibly useful mechanism for isolation, they are not perfect. And, usually, there is not one sandbox, but many – each one runs a different program, provides a different functionality. What is the impact of one malicious program on other, correctly functioning programs?</p>
-<p>These are the questions that Dr. Jason Jaskolka tries to answer. The odd computer scientist at a political science department, Dr. Jaskolka easily gets excited to talk about his research.</p>
-<p>But most things are big, hence it is very hard to reason about them. People tend to get incredibly confused with long chains of interactions.</p>
-<p>So why not automate the reasoning about the security of things? But that requires a formalization, being able to translate the interactions between components, and what qualities we care about to terms that a computer understands.</p>
-<p>Interview with Jaskolka on May 9th.</p>
+<h2 id="stimuli-and-responses">Stimuli and responses</h2>
+<p>While sandboxes are an incredibly useful mechanism for isolation, they are not perfect. And, usually, there is not just one system that has to be isolated, but many separate components that form the bigger system – each one runs a different program, provides a different functionality.</p>
+<p>A car is an excellent example of such a conglomeration of devices that coordinate to provide a certain experience. The sound system connects to a phone through Bluetooth. The same sound system is also connected to the engine computers, so that the volume of the audio can go up as the car accelerates. In fact, such a communication channel was used in 2015 by security researchers Charlie Miller and Chris Valasek to remotely access the entertainment system of a car, the proceed to gain access to the transmission, the steering wheel and the brakes.<span><label for="sn-9" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-9" class="margin-toggle" /><span class="sidenote">Greenberg, Andy. AFTER JEEP HACK, CHRYSLER RECALLS 1.4M VEHICLES FOR BUG FIX. Wired, 2015.<br />
+<br />
+</span></span> As a result, Miller and Valasek were able to completely control the vehicle, a recent Jeep Cherokee, from deciding to go faster or slower to direction of the steering wheel. The problem was so serious that Chrysler recalled 1.4 million cars to fix it.</p>
+<p>It worked remotely – once Miller and Valasek gained access to the entertainment subsystem of the vehicle over the Internet, they were able to escalate to other components. Each step of the escalation gave them a little bit more access. Each step was nothing more than communication between different parts of the car, which should have been isolated, like the radio and the brakes, but the interaction between the components was possible.</p>
+<p>But there are almost a hundred computers in a car and thousands of possible such interactions, where each interaction poses a danger.</p>
+<p>Dr. Jason Jaskolka, a cybersecurity postdoctoral scholar at Stanford, is developing tools to aide the analysis of such large systems. His latest research focuses on mathematical methods for the analysis of system design. The underlying problem Dr. Jaskolka is trying to solve the problem of detecting and reasoning about indirect communications between components, precisely like the interaction between a car entertainment system and the brakes.</p>
+<blockquote>
+<p>This idea of baking in security, rather than bolting it on, is the way to go.</p>
+</blockquote>
 <h2 id="works-cited">Works Cited</h2>
-<p>Corrigan-Gibbs, Henry, et al. <a href="https://arxiv.org/abs/1503.06115v5" target="_blank">RIPOSTE: AN ANONYMOUS MESSAGING SYSTEM HANDLING MILLIONS OF USERS</a>.</p>
 <p>Economist, The. <a href="http://www.economist.com/news/science-and-technology/21720268-consequences-pile-up-things-are-starting-improve-computer-security" target="_blank">COMPUTER SECURITY IS BROKEN FROM TOP TO BOTTOM</a>. Economist, 2017.</p>
+<p>Greenberg, Andy. AFTER JEEP HACK, CHRYSLER RECALLS 1.4M VEHICLES FOR BUG FIX. Wired, 2015.</p>
 <p>Jones, Sam. <a href="https://www.ft.com/content/af74e3f4-373d-11e7-99bd-13beb0903fa3" target="_blank">WHAT IS WANNACRY AND HOW CAN IT BE STOPPED?</a>. Financial Times, 2017.</p>
+<p>OpenHub. <a href="https://www.openhub.net/p/chrome/analyses/latest/languages_summary" target="_blank">The Chromium Web browser source summary</a>. OpenHub, 2017.</p>
 <p>Lomont, Chris. <a href="https://software.intel.com/en-us/articles/introduction-to-x64-assembly" target="_blank">INTRODUCTION TO X64 ASSEMBLY</a>. Intel, 2016.</p>
 <p>Sotirov, Alexander el al. <a href="https://www.blackhat.com/presentations/bh-usa-08/Sotirov_Dowd/bh08-sotirov-dowd.pdf" target="_blank">BYPASSING BROWSER MEMORY PROTECTIONS</a>. BlackHat, 2008.</p>
 <p>Wahbe, Robert, et al. <a href="http://cs2.unomaha.edu/~stanw/papers/93-sfi.pdf" target="_blank">EFFICIENT SOFTWARE-BASED FAULT ISOLATION</a></p>
